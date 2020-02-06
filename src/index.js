@@ -5,7 +5,7 @@
 //
 
 import React, { Component, Children, createElement, cloneElement } from 'react';
-import { View } from 'react-native';
+import { View,ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 
 import validateForm from './validators/validateForm';
@@ -74,9 +74,9 @@ class Form extends Component {
     });
 
     return(
-      <View style={style ? style : {}}>
+      <ScrollView style={style ? style : {}}>
         {childrenWithProps}
-      </View>
+      </ScrollView>
     );
   }
 }
